@@ -18,3 +18,6 @@ def extra_features(texts):
 
 def build_vectorizer():
     return TfidfVectorizer(ngram_range=(1,2), max_features=5000)
+
+def extra_features_wrapper(x):
+    return extra_features(x)

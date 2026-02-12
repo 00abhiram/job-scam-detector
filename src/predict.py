@@ -1,4 +1,5 @@
 import joblib
+import features
 from preprocess import clean_text
 
 model = joblib.load("models/scam_model.pkl")

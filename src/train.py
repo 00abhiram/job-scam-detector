@@ -7,10 +7,7 @@ from sklearn.preprocessing import FunctionTransformer
 import joblib
 
 from preprocess import clean_text
-from features import extra_features, build_vectorizer
-
-def extra_features_wrapper(x):
-    return extra_features(x)
+from features import extra_features, extra_features_wrapper, build_vectorizer
 
 df = pd.read_csv("data/dataset.csv")
 df["clean_text"] = df["text"].astype(str).apply(clean_text)
